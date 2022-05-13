@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NavbarComponent } from './components/navbar/navbar.component';
+
+import { HomeComponent } from './components/pages/home/home.component';
+import { SobreComponent } from './components/pages/sobre/sobre.component';
 
 const routes: Routes = [
-  
-  {path: 'navbar', component:NavbarComponent},
-
+  { path: '', component: HomeComponent },
+  { path: 'sobre', component: SobreComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
