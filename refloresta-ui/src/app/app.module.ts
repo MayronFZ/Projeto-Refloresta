@@ -1,26 +1,18 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './components/pages/home/home.component';
 import { SobreComponent } from './components/pages/sobre/sobre.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    HomeComponent,
-    SobreComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule
-  ],
+  declarations: [AppComponent, HeaderComponent, SobreComponent, HomeComponent],
+  imports: [BrowserModule, AppRoutingModule, MatTabsModule, BrowserAnimationsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
